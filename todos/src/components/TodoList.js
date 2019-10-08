@@ -10,10 +10,17 @@ export default function TodoList(props) {
       });
   }
 
+  const clearCompletedTodos = () => {
+     dispatch({
+         type: 'ON_CLEAR_COMPLETE'
+     });
+  }
+
   return (
     <div>
+      <button onClick={clearCompletedTodos}>Clear Completed Todos</button>
       {state.todos.map(todo => {
-        return <p className={todo.completed ? 'complete' : 'incomplete'} onClick={() => toggleTodo(todo.id)}>{todo.name}</p>;
+        return <p className={todo.complete ? 'complete' : 'incomplete'} onClick={() => toggleTodo(todo.id)}>{todo.name}</p>;
       })}
     </div>
   );
