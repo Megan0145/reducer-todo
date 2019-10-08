@@ -20,10 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
-
+/* 
 .incomplete {
-  color: red;
-}
+
+} */
 .complete {
-  color: green;
+  text-decoration: line-through;
 }
