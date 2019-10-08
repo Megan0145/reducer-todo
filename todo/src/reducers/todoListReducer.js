@@ -6,7 +6,7 @@ export const initialTodoList = [
     {id:2, name: 'Review TK for tomorrow', completed: false}
   ]
   
-  export function reducer(state, action) {
+  export function todoListReducer(state, action) {
     switch(action.type) {
       default: 
       return initialTodoList;

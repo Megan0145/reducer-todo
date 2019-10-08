@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
-import { initialTodoList, reducer } from '../reducers/reducer';
+import { todoListReducer, initialTodoList } from '../reducers/todoListReducer';
 
 export default function TodoList(props){
-    const [todos, dispatch] = useReducer(reducer, initialTodoList);
+    const [todos, dispatch] = useReducer(todoListReducer, initialTodoList);
 
     return(
         <div>
